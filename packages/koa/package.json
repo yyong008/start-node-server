@@ -3,10 +3,18 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Magnesium-",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "@types/koa__router": "^8.0.11",
+    "koa": "^2.13.4",
+    "koa-router": "^12.0.0"
+  }
 }

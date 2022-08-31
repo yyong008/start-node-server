@@ -28,7 +28,7 @@ Start the NodeJS HTTP service with a different framework
 | 框架/库(偏后端) | 说明                     |
 | --------------- | ------------------------ |
 | nextjs          | react 服务端渲染、预渲染 |
-| nextjs          | vue 服务端渲染、预渲染   |
+| nuxtjs          | vue 服务端渲染、预渲染   |
 
 | 框架/库(websocket) | 说明                  |
 | ------------------ | --------------------- |
@@ -40,5 +40,22 @@ Start the NodeJS HTTP service with a different framework
 ## http
 
 ```js
+import http from 'node:http'
 
+const start = async () => {
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(
+      JSON.stringify({
+        data: 'hello world'
+      })
+    )
+  })
+
+  server.listen(9000, () => {
+    console.log(`Server on：http://localhost:9000`)
+  })
+}
+
+start()
 ```
